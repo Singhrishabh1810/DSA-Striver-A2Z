@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class revNum {
 
-	int ReverseInt(int n) {
+	public static int ReverseInt(int n) {
 		int reversed=0;
 		while(n!=0) {
 			int c=n%10;
@@ -18,9 +18,9 @@ public class revNum {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the number: ");
 		int v=sc.nextInt();
-		revNum r=new revNum();
-		System.out.println(r.ReverseInt(v));
+		System.out.println(ReverseInt(v));
 		sc.close();
 		
 	}

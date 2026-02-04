@@ -1,27 +1,26 @@
 package dsa;
+
 import java.util.Scanner;
 
 public class CountDigits {
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the number:");
-		int n=sc.nextInt();
-		int count=0;
-		
-		if(n==0) {
-			System.out.println("Number of digits:1"); 
-			return;
-		}
-		while(n>0) {
-			n=n/10;
-			count+=1;
-		}
-		
-		
-		
-		System.out.println("Number of digits: "+count);
-		sc.close();
-		
-	}
 
+    public static int countDigit(int n) {
+        if (n == 0) return 1;
+
+        int count = 0;
+        while (n > 0) {
+            n /= 10;
+            count++;
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+    	Scanner sc=new Scanner(System.in);
+    	System.out.print("Enter the number: ");
+    	int num=sc.nextInt();
+        int result = CountDigits.countDigit(num);
+        System.out.println("Number of digits: " + result);
+        sc.close();
+    }
 }
