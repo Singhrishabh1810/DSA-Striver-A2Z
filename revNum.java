@@ -1,4 +1,5 @@
 package dsa;
+import java.util.Scanner;
 
 public class revNum {
 
@@ -16,10 +17,11 @@ public class revNum {
 
 
 	public static void main(String[] args) {
-		int v=123;
+		Scanner sc=new Scanner(System.in);
+		int v=sc.nextInt();
 		revNum r=new revNum();
-		r.ReverseInt(v);
-		System.out.println(v);
+		System.out.println(r.ReverseInt(v));
+		sc.close();
 		
 	}
 }
